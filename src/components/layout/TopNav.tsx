@@ -1,4 +1,4 @@
-import { Settings, CreditCard, HeadsetMic, LogOut } from "lucide-react";
+import { Settings, CreditCard, Headset, LogOut } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,7 +25,7 @@ export function TopNav() {
               <span>Billing</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <HeadsetMic className="mr-2 h-4 w-4" />
+              <Headset className="mr-2 h-4 w-4" />
               <span>Support</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
