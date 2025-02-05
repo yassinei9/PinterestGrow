@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function TopNav() {
   return (
@@ -13,12 +14,15 @@ export function TopNav() {
       <div className="flex h-16 items-center px-6 justify-end">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative h-9 w-9 rounded-full">
-              <img
-                src="https://github.com/shadcn.png"
-                alt="User"
-                className="h-9 w-9 rounded-full"
-              />
+            <Button variant="ghost" className="relative h-10 w-10 rounded-full">
+              <Avatar className="h-10 w-10">
+                <AvatarImage
+                  src="https://github.com/shadcn.png"
+                  alt="User"
+                  className="object-cover"
+                />
+                <AvatarFallback>UN</AvatarFallback>
+              </Avatar>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
