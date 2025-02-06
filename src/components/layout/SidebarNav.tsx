@@ -24,10 +24,12 @@ const navItems = [
 
 export function SidebarNav() {
   return (
-    <nav className="w-64 bg-sidebar-background flex flex-col h-screen">
-      <div className="p-6 border-b border-sidebar-hover">
+    <nav className="w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 flex flex-col h-screen transition-colors duration-200">
+      <div className="p-6 border-b border-gray-200 dark:border-gray-800">
         <Link to="/" className="flex items-center">
-          <span className="text-pinred text-2xl font-bold tracking-tight">PinClicks²</span>
+          <span className="text-pinred dark:text-red-400 text-2xl font-bold tracking-tight">
+            PinClicks²
+          </span>
         </Link>
       </div>
       <div className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
@@ -35,10 +37,12 @@ export function SidebarNav() {
           <Link
             key={item.path}
             to={item.path}
-            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-sidebar-hover rounded-lg transition-all duration-200 group"
+            className="flex items-center space-x-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all duration-200 group"
           >
-            <item.icon className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors" />
-            <span className="font-medium group-hover:text-white transition-colors">{item.label}</span>
+            <item.icon className="h-5 w-5 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" />
+            <span className="font-medium group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+              {item.label}
+            </span>
           </Link>
         ))}
       </div>
