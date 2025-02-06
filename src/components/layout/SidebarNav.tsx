@@ -28,7 +28,7 @@ export function SidebarNav() {
       <div className="p-6 border-b border-gray-200 dark:border-gray-800">
         <Link to="/" className="flex items-center">
           <span className="text-pinred dark:text-red-400 text-2xl font-bold tracking-tight">
-            PinClicks²
+            PinsBoost
           </span>
         </Link>
       </div>
